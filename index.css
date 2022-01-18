@@ -4,16 +4,13 @@
     box-sizing: border-box;
 }
 
-.page-header {
-    color: #000;
+body {
     text-align: center;
     background: linear-gradient(to right, #b1b1ff, #9ed8ff , #acffac, #ff99cc, #adadff);
     animation: rainbow_animation 20s ease-in-out infinite;
     padding: 5rem 6rem;
     background-size: 400% 100%;
-}
 
-body {
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
@@ -96,6 +93,7 @@ a {
     width: 50%;
     text-align: center;
     padding: 10px;
+    transition: transform .5s;
 }
 
 .nav-button{
@@ -103,6 +101,10 @@ a {
     color: black;
     background: rgb(136, 233, 236);
     padding: 5px 10px 5px 10px;
+}
+
+.top-nav:hover{
+    transform: scale(1.5);
 }
 
 @keyframes rainbow_animation {
@@ -120,7 +122,7 @@ a {
 }
 
 @keyframes fadein {
-    from { opacity: 0.75; }
+    from { opacity: 0.5; }
     to   { opacity: 1; }
 }
 
@@ -129,7 +131,7 @@ img {
   }
 
 img:hover {
-    transform: scale(2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    transform: scale(2);
   }
 
 .slide-right {
